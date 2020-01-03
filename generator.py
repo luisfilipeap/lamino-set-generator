@@ -24,7 +24,7 @@ def create_hole(data, src, radius, slice, rot):
 
 if __name__ == "__main__":
 
-    dest = ".\\data_plates\\"
+    dest = "D:\\Datasets\\data_plates\\"
     if not os.path.isdir(dest):
         os.mkdir(dest)
 
