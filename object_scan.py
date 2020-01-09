@@ -34,7 +34,7 @@ class ScanningObject:
         acquisition.
         """
 
-        self.vol_geom = astra.create_vol_geom(256, 256, 10)
+        self.vol_geom = astra.create_vol_geom(128, 128, 10)
 
         self.setup = InlineScanningSetup(alpha=alpha_param, detector_cells=n_cells_param,
                                          number_of_projections=n_proj_param, object_size=rec_size_param)
@@ -92,8 +92,8 @@ if __name__ == '__main__':
     #test code by running scanning_object.py
     src = "D:\\Datasets\\demo_data_plates\\plate_00000\\"
 
-    plane = np.zeros((10, 256, 256))
-    for k in range(10):
+    plane = np.zeros((30, 300, 300))
+    for k in range(30):
         i = imread(src + 'slice_{}.png'.format(k), pilmode='F')
         plane[k,:,:] = i
 
@@ -101,9 +101,9 @@ if __name__ == '__main__':
     out = setup.run(plane)
 
     plt.figure("REC")
-    plt.imshow(out['rec'][0, :, :])
+    plt.imshow(out['sino'][:, 4,:])
 
-    plt.figure("PHANTOM")
-    plt.imshow(plane[0,:,:])
+    #plt.figure("PHANTOM")
+    #plt.imshow(plane[0,:,:])
 
     plt.show()
