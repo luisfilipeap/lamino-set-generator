@@ -2,58 +2,46 @@
 
 import numpy as np
 from skimage.draw import ellipse
-from imageio import imwrite
-from random import randint
-import os
+import matplotlib.pyplot as plt
 
+flat_plane_width = 250
+flat_plane_height = 250
+flat_plane_length = 10
 
-def create_hole(data, src, radius, slice, rot):
+number_of_planes = 10000
 
-    h, _, _ = data.shape
+def create_hole(data, slice, pos, radiusC, radiusR):
+    #function to create a 3D hole inside a parallelide
+    _, _, s = data.shape
 
-    for s in range(4):
-
-        rr, cc = ellipse(src[0], src[1], max(radius[0]-2*s,1), max(radius[1]-2*s,1), rotation=np.deg2rad(rot))
-        rr[rr > 99] = 99
-        cc[cc > 99] = 99
-        data[max(slice-s,0), rr,cc] = 0.6
-        data[min(slice+s,h-1), rr, cc] = 0.6
-
-
+    for k in range(min(radiusC, radiusR)):
+            rr, cc = ellipse(pos[0], pos[1], radiusC-2*k, radiusR-2*k,0)
+            if slice-k >= 0:
+                data[rr, cc, slice-k] = 0
+            if slice+k < s:
+                data[rr, cc, slice+k] = 0
     return data
+
+
+for plane in range(number_of_planes):
+    data = np.ones((flat_plane_height, flat_plane_width, flat_plane_length))
+
+
 
 if __name__ == "__main__":
 
-    dest = "D:\\Datasets\\demo_data_plates\\"
-    if not os.path.isdir(dest):
-        os.mkdir(dest)
+    p = np.ones((250,250, 10))
+    p = create_hole(p, 5, (125, 125), 4, 4)
 
-    for i in range(10000):
+    plt.figure()
+    plt.imshow(p[:,:,0])
+    plt.figure()
+    plt.imshow(p[:, :, 2])
+    plt.figure()
+    plt.imshow(p[:, :, 4])
+    plt.figure()
+    plt.imshow(p[:, :, 6])
+    plt.figure()
+    plt.imshow(p[:, :, 8])
 
-
-        plane = np.ones((8, 100, 100))*0.7
-
-        nr_holes = randint(1,10)
-
-        for k in range(nr_holes):
-            random_posx = randint(0,100)
-            random_posy = randint(0,100)
-
-            random_radiusx = randint(1,12)
-            random_radiusy = randint(1,12)
-
-            random_rot = randint(0,180)
-            random_slice = randint(0,7)
-            create_hole(plane, src = (random_posx, random_posy), radius = (random_radiusx,random_radiusy), rot = random_rot, slice=random_slice)
-
-        total = np.zeros((10, 128, 128))
-        total[1:9,14:114,14:114] = plane
-
-        if not os.path.isdir(dest+"plate_{:05d}".format(i)):
-            os.mkdir(dest+"plate_{:05d}".format(i))
-
-        for x in range(10):
-            imwrite(dest+"plate_{:05d}\\slice_{}.png".format(i,x), total[x,:,:])
-
-
-
+    plt.show()
