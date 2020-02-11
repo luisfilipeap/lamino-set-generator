@@ -1,47 +1,55 @@
 
 
+
+
 import numpy as np
 from skimage.draw import ellipse
 import matplotlib.pyplot as plt
 
-flat_plane_width = 250
-flat_plane_height = 250
-flat_plane_length = 10
 
-number_of_planes = 10000
 
-def create_hole(data, slice, pos, radiusC, radiusR):
-    #function to create a 3D hole inside a parallelide
-    _, _, s = data.shape
+def create_ellipsoid_hole(data, src, radius, slice, rot):
 
-    for k in range(min(radiusC, radiusR)):
-            rr, cc = ellipse(pos[0], pos[1], radiusC-2*k, radiusR-2*k,0)
-            if slice-k >= 0:
-                data[rr, cc, slice-k] = 0
-            if slice+k < s:
-                data[rr, cc, slice+k] = 0
+    h, _, _ = data.shape
+
+    for s in range(4):
+
+        rr, cc = ellipse(src[0], src[1], max(radius[0]-2*s,1), max(radius[1]-2*s,1), rotation=np.deg2rad(rot))
+        rr[rr > 255] = 255
+        cc[cc > 255] = 255
+        data[max(slice-s,0), rr,cc] = 0.6
+        data[min(slice+s,h-1), rr, cc] = 0.6
+
     return data
 
+def create_simple_lamino_set_of_holes():
+    dest = ".\\data_plates\\"
+    if not os.path.isdir(dest):
+        os.mkdir(dest)
 
-for plane in range(number_of_planes):
-    data = np.ones((flat_plane_height, flat_plane_width, flat_plane_length))
+    for i in range(10000):
+        plane = np.ones((10, 256, 256)) * 0.7
 
+        nr_holes = randint(1, 10)
 
+        for k in range(nr_holes):
+            random_posx = randint(0, 255)
+            random_posy = randint(0, 255)
+
+            random_radiusx = randint(1, 25)
+            random_radiusy = randint(1, 25)
+
+            random_rot = randint(0, 180)
+            random_slice = randint(0, 9)
+            create_hole(plane, src=(random_posx, random_posy), radius=(random_radiusx, random_radiusy), rot=random_rot,
+                        slice=random_slice)
+
+        if not os.path.isdir(dest + "plate_{:05d}".format(i)):
+            os.mkdir(dest + "plate_{:05d}".format(i))
+
+        for x in range(10):
+            imwrite(dest + "plate_{:05d}\\slice_{}.png".format(i, x), plane[x, :, :])
 
 if __name__ == "__main__":
 
-    p = np.ones((250,250, 10))
-    p = create_hole(p, 5, (125, 125), 4, 4)
-
-    plt.figure()
-    plt.imshow(p[:,:,0])
-    plt.figure()
-    plt.imshow(p[:, :, 2])
-    plt.figure()
-    plt.imshow(p[:, :, 4])
-    plt.figure()
-    plt.imshow(p[:, :, 6])
-    plt.figure()
-    plt.imshow(p[:, :, 8])
-
-    plt.show()
+    print("Hello World!")
