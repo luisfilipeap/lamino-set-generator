@@ -10,7 +10,15 @@ from imageio import imwrite
 import os
 from skimage.util import random_noise
 
+def noise(size, lamb, cut):
 
+    a = np.random.poisson(lam=lamb, size=size)
+
+    xv, yv = np.meshgrid(range(size[0]), range(size[1]))
+    d = np.sqrt(np.power(xv-size[0]/2,2)+np.power(yv-size[1]/2,2))
+    mask = 1-1/(1+np.power(d/cut,2))
+
+    return mask*a
 
 def create_ellipsoid_hole(data, src, radius, slice, rot):
 
@@ -172,5 +180,5 @@ if __name__ == "__main__":
             os.mkdir(src+dest)
 
         for z in range(16):
-            imwrite("{}slice_{}.png".format(src+dest, z), block[:,:,z])
+            imwrite("{}slice_{:02d}.png".format(src+dest, z), block[:,:,z])
 

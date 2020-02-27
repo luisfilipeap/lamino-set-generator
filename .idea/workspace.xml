@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd2a5feb-3a2e-4585-b20e-3bf5bdd5bdcd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/lamino-set-generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lamino-set-generator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/generator.py" afterDir="false" />
     </list>
@@ -34,7 +32,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.generator">
     <configuration name="generator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="lamino-set-generator" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -56,9 +54,53 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_noise" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lamino-set-generator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Visielab\Anaconda3\envs\lamino-set-generator-2\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_noise.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="visualize_lamino" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lamino-set-generator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualize_lamino.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.generator" />
+        <item itemvalue="Python.visualize_lamino" />
+        <item itemvalue="Python.test_noise" />
       </list>
     </recent_temporary>
   </component>
@@ -85,32 +127,92 @@
       <option name="presentableId" value="Default" />
       <updated>1577977379660</updated>
     </task>
+    <task id="LOCAL-00001" summary="Generator for the first simple dataset of holes">
+      <created>1581429833761</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581429833761</updated>
+    </task>
+    <task id="LOCAL-00002" summary="generates samples for a second article. The samples should represent attachable blocks">
+      <created>1581596271166</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581596271166</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Generator for the first simple dataset of holes" />
+    <MESSAGE value="generates samples for a second article. The samples should represent attachable blocks" />
+    <option name="LAST_COMMIT_MESSAGE" value="generates samples for a second article. The samples should represent attachable blocks" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1577977699044">
+    <state x="414" y="236" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582020767618">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="740" y="335" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1577977699044" />
-    <state width="1362" height="266" key="GridCell.Tab.0.bottom" timestamp="1577982140336">
+    <state x="414" y="236" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1582020767618" />
+    <state x="679" y="195" key="#generator" timestamp="1582276599584">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1577982140336" />
-    <state width="1362" height="266" key="GridCell.Tab.0.center" timestamp="1577982140336">
+    <state x="679" y="195" key="#generator/0.0.1920.1160@0.0.1920.1160" timestamp="1582276599584" />
+    <state x="679" y="195" key="#test_noise" timestamp="1581604986119">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="266" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1577982140336" />
-    <state width="1362" height="266" key="GridCell.Tab.0.left" timestamp="1577982140336">
+    <state x="679" y="195" key="#test_noise/0.0.1920.1160@0.0.1920.1160" timestamp="1581604986119" />
+    <state x="614" y="175" key="CommitChangelistDialog2" timestamp="1581596270709">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="266" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1577982140336" />
-    <state width="1362" height="266" key="GridCell.Tab.0.right" timestamp="1577982140336">
+    <state x="614" y="175" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1581596270709" />
+    <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1582021346497">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="266" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1577982140336" />
-    <state x="461" y="223" key="SettingsEditor" timestamp="1577979305444">
+    <state x="740" y="335" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1582021346497" />
+    <state width="1899" height="321" key="GridCell.Tab.0.bottom" timestamp="1582276900129">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="461" y="223" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1577979305444" />
+    <state width="1899" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1582276900129" />
+    <state width="1899" height="321" key="GridCell.Tab.0.center" timestamp="1582276900129">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="321" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1582276900129" />
+    <state width="1899" height="321" key="GridCell.Tab.0.left" timestamp="1582276900129">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="321" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1582276900129" />
+    <state width="1899" height="321" key="GridCell.Tab.0.right" timestamp="1582276900129">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="321" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1582276900129" />
+    <state width="1899" height="393" key="GridCell.Tab.1.bottom" timestamp="1581596582828">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="393" key="GridCell.Tab.1.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1581596582828" />
+    <state width="1899" height="393" key="GridCell.Tab.1.center" timestamp="1581596582828">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="393" key="GridCell.Tab.1.center/0.0.1920.1160@0.0.1920.1160" timestamp="1581596582828" />
+    <state width="1899" height="393" key="GridCell.Tab.1.left" timestamp="1581596582828">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="393" key="GridCell.Tab.1.left/0.0.1920.1160@0.0.1920.1160" timestamp="1581596582828" />
+    <state width="1899" height="393" key="GridCell.Tab.1.right" timestamp="1581596582828">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="393" key="GridCell.Tab.1.right/0.0.1920.1160@0.0.1920.1160" timestamp="1581596582828" />
+    <state x="461" y="223" key="SettingsEditor" timestamp="1582276607889">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="461" y="223" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1582276607889" />
+    <state x="552" y="314" key="Vcs.Push.Dialog.v2" timestamp="1581596276051">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="552" y="314" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1581596276051" />
+    <state x="656" y="405" key="com.intellij.ide.util.TipDialog" timestamp="1581590691304">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="656" y="405" key="com.intellij.ide.util.TipDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1581590691304" />
   </component>
 </project>
